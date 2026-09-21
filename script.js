@@ -213,7 +213,24 @@ function updateRegistrationFee() {
     }
 
 
-    // Autres ou aucune sélection
+    // Autres
+
+    if (
+        selectedFunction ===
+        "Autres"
+    ) {
+
+        montantInscription.textContent =
+            "aucun paiement à effectuer.";
+
+        fraisInscription.classList.remove(
+            "hidden"
+        );
+
+        return;
+    }
+    
+    // Aucune sélection
 
     fraisInscription.classList.add(
         "hidden"
