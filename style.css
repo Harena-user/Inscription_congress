@@ -14,6 +14,7 @@
 
     /* Texte */
     --color-text: #276b88;
+    --color-usertext:rgb(20, 39, 75);
     --color-text-light: #666666;
 
     /* Bordures */
@@ -212,7 +213,7 @@ select {
         var(--color-input);
 
     color:
-        var(--color-text);
+        var(--color-usertext);
 
     font-family: inherit;
 
