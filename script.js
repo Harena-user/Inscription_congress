@@ -138,18 +138,16 @@ function isValidEmail(email) {
 // ======================================================
 // VALIDATION TÉLÉPHONE
 // ======================================================
-// Accepte par exemple : 034 00 000 00; 0340000000// 
+// Accepte par exemple : 034 00 000 00; 0340000000
+// Accepte le numéro de fixe: 020 00 000 00
+// Accepte l'insertion de l'indicatif international +261
 
 function isValidPhone(phone) {
 
-    const digits =
-        phone.replace(/\D/g, "");
+    const digits = phone.replace(/\D/g, "");
 
-    return /^03[2348]\d{7}$/.test(
-        digits
-    );
+    return /^(?:0|261)(20|3[2345789])\d{7}$/.test(digits);
 }
-
 
 // ======================================================
 // GESTION DU TARIF
