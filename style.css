@@ -1,0 +1,536 @@
+
+/* VARIABLES */
+
+:root {
+
+    /* Couleurs principales */
+    --color-primary: #2563eb;
+    --color-primary-hover: #1d4ed8;
+
+    /* Arrière-plans */
+    --color-background: #f4f6f8;
+    --color-card: #ffffff;
+    --color-input: #ffffff;
+
+    /* Texte */
+    --color-text: #222222;
+    --color-text-light: #666666;
+
+    /* Bordures */
+    --color-border: #d1d5db;
+    --color-border-focus: #2563eb;
+
+    /* Erreurs */
+    --color-error: #dc2626;
+    --color-error-background: #fef2f2;
+
+    /* Succès */
+    --color-success: #15803d;
+    --color-success-background: #f0fdf4;
+
+    /* Informations */
+    --color-info: #1e40af;
+    --color-info-background: #eff6ff;
+    --color-info-border: #bfdbfe;
+
+    /* Bouton désactivé */
+    --color-disabled: #9ca3af;
+
+    /* Ombre */
+    --color-shadow: rgba(0, 0, 0, 0.08);
+
+    /* Rayons */
+    --radius-card: 12px;
+    --radius-input: 7px;
+    --radius-button: 7px;
+}
+
+
+/* ======================================================
+   RESET
+   ====================================================== */
+
+* {
+    box-sizing: border-box;
+}
+
+
+html {
+    font-size: 16px;
+}
+
+
+body {
+
+    margin: 0;
+
+    min-width: 320px;
+
+    font-family:
+        Arial,
+        Helvetica,
+        sans-serif;
+
+    color: var(--color-text);
+
+    background-color:
+        var(--color-background);
+}
+
+
+/* ======================================================
+   CONTENEUR PRINCIPAL
+   ====================================================== */
+
+.container {
+
+    width: 100%;
+
+    min-height: 100vh;
+    min-height: 100dvh;
+
+    display: flex;
+
+    justify-content: center;
+    align-items: flex-start;
+
+    padding: 20px 12px;
+}
+
+
+/* ======================================================
+   CARTE
+   ====================================================== */
+
+.form-card {
+
+    width: 100%;
+
+    max-width: 520px;
+
+    padding: 24px 18px;
+
+    background-color:
+        var(--color-card);
+
+    border-radius:
+        var(--radius-card);
+
+    box-shadow:
+        0 5px 20px var(--color-shadow);
+}
+
+
+/* ======================================================
+   TITRE
+   ====================================================== */
+
+h1 {
+
+    margin: 0 0 8px;
+
+    text-align: center;
+
+    font-size: 25px;
+
+    line-height: 1.25;
+}
+
+
+/* ======================================================
+   INTRODUCTION
+   ====================================================== */
+
+.intro {
+
+    margin: 0 0 25px;
+
+    color:
+        var(--color-text-light);
+
+    text-align: center;
+
+    line-height: 1.5;
+}
+
+
+/* ======================================================
+   GROUPES
+   ====================================================== */
+
+.form-group {
+
+    margin-bottom: 18px;
+}
+
+
+/* ======================================================
+   LABELS
+   ====================================================== */
+
+label {
+
+    display: block;
+
+    margin-bottom: 7px;
+
+    font-weight: 600;
+
+    line-height: 1.4;
+}
+
+
+.required {
+
+    color:
+        var(--color-error);
+}
+
+
+/* ======================================================
+   INPUTS ET SELECT
+   ====================================================== */
+
+input,
+select {
+
+    display: block;
+
+    width: 100%;
+
+    min-height: 48px;
+
+    padding: 11px 12px;
+
+    border:
+        1px solid var(--color-border);
+
+    border-radius:
+        var(--radius-input);
+
+    background-color:
+        var(--color-input);
+
+    color:
+        var(--color-text);
+
+    font-family: inherit;
+
+    font-size: 16px;
+
+    outline: none;
+
+    transition:
+        border-color 0.15s ease,
+        box-shadow 0.15s ease,
+        background-color 0.15s ease;
+}
+
+
+/* ======================================================
+   FOCUS
+   ====================================================== */
+
+input:focus,
+select:focus {
+
+    border-color:
+        var(--color-border-focus);
+
+    box-shadow:
+        0 0 0 3px
+        rgba(37, 99, 235, 0.12);
+}
+
+
+/* ======================================================
+   CHAMP EN ERREUR
+   ====================================================== */
+
+input.invalid,
+select.invalid {
+
+    border-color:
+        var(--color-error);
+
+    background-color:
+        var(--color-error-background);
+}
+
+
+input.invalid:focus,
+select.invalid:focus {
+
+    border-color:
+        var(--color-error);
+
+    box-shadow:
+        0 0 0 3px
+        rgba(220, 38, 38, 0.12);
+}
+
+
+/* ======================================================
+   MESSAGES D'ERREUR
+   ====================================================== */
+
+.error {
+
+    display: block;
+
+    min-height: 18px;
+
+    margin-top: 5px;
+
+    color:
+        var(--color-error);
+
+    font-size: 13px;
+
+    line-height: 1.4;
+}
+
+
+/* ======================================================
+   DROIT D'INSCRIPTION
+   ====================================================== */
+
+.fee-box {
+
+    margin: 4px 0 20px;
+
+    padding: 13px 14px;
+
+    color:
+        var(--color-info);
+
+    background-color:
+        var(--color-info-background);
+
+    border:
+        1px solid var(--color-info-border);
+
+    border-radius:
+        var(--radius-input);
+
+    line-height: 1.5;
+}
+
+
+/* ======================================================
+   INFORMATION CONTACT
+   ====================================================== */
+
+.contact-info {
+
+    margin-top: 8px;
+    margin-bottom: 20px;
+
+    padding: 14px;
+
+    text-align: center;
+
+    color:
+        var(--color-text-light);
+
+    background-color:
+        var(--color-background);
+
+    border-radius:
+        var(--radius-input);
+
+    line-height: 1.5;
+}
+
+
+.contact-info p {
+
+    margin: 0 0 4px;
+}
+
+
+.contact-info strong {
+
+    color:
+        var(--color-text);
+}
+
+
+/* ======================================================
+   BOUTON
+   ====================================================== */
+
+button {
+
+    display: block;
+
+    width: 100%;
+
+    min-height: 48px;
+
+    padding: 12px 16px;
+
+    border: none;
+
+    border-radius:
+        var(--radius-button);
+
+    background-color:
+        var(--color-primary);
+
+    color:
+        #ffffff;
+
+    font-family: inherit;
+
+    font-size: 16px;
+
+    font-weight: 700;
+
+    cursor: pointer;
+
+    transition:
+        background-color 0.15s ease,
+        transform 0.05s ease;
+}
+
+
+button:hover:not(:disabled) {
+
+    background-color:
+        var(--color-primary-hover);
+}
+
+
+button:active:not(:disabled) {
+
+    transform:
+        translateY(1px);
+}
+
+
+button:disabled {
+
+    background-color:
+        var(--color-disabled);
+
+    cursor: not-allowed;
+}
+
+
+/* ======================================================
+   MESSAGE GLOBAL
+   ====================================================== */
+
+.form-message {
+
+    min-height: 20px;
+
+    margin: 0 0 15px;
+
+    text-align: center;
+
+    font-weight: 600;
+
+    line-height: 1.5;
+}
+
+
+.form-message.success {
+
+    padding: 10px;
+
+    color:
+        var(--color-success);
+
+    background-color:
+        var(--color-success-background);
+
+    border-radius:
+        var(--radius-input);
+}
+
+
+.form-message.error {
+
+    padding: 10px;
+
+    color:
+        var(--color-error);
+
+    background-color:
+        var(--color-error-background);
+
+    border-radius:
+        var(--radius-input);
+}
+
+
+/* ======================================================
+   ÉLÉMENT CACHÉ
+   ====================================================== */
+
+.hidden {
+
+    display: none !important;
+}
+
+
+/* ======================================================
+   TABLETTE
+   ====================================================== */
+
+@media (min-width: 600px) {
+
+    .container {
+
+        padding:
+            40px 20px;
+    }
+
+
+    .form-card {
+
+        padding:
+            32px;
+    }
+
+
+    h1 {
+
+        font-size: 28px;
+    }
+}
+
+
+/* ======================================================
+   ORDINATEUR
+   ====================================================== */
+
+@media (min-width: 900px) {
+
+    .container {
+
+        align-items: center;
+
+        padding:
+            40px 20px;
+    }
+}
+
+
+/* ======================================================
+   ACCESSIBILITÉ
+   ====================================================== */
+
+@media (prefers-reduced-motion: reduce) {
+
+    *,
+    *::before,
+    *::after {
+
+        transition: none !important;
+
+        animation: none !important;
+    }
+}
