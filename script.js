@@ -1,6 +1,6 @@
-const SUPABASE_URL = "TON_SUPABASE_URL";
+const SUPABASE_URL = "https://chbdlfwkfxwbiktcvdiz.supabase.co";
 
-const SUPABASE_KEY = "TON_SUPABASE_PUBLISHABLE_KEY";
+const SUPABASE_KEY = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImNoYmRsZndrZnh3YmlrdGN2ZGl6Iiwicm9sZSI6ImFub24iLCJpYXQiOjE3ODk5MjA3NzgsImV4cCI6MjEwNTQ5Njc3OH0.7Uf-eSlky49OtEKQFCUEnKzt0LnzOOxCnO9z9a0SM0g";
 
 
 // Création du client Supabase
@@ -592,6 +592,21 @@ form.addEventListener(
             return;
         }
 
+        // ===============================
+        // VÉRIFICATION DU CLIENT SUPABASE
+        // ===============================
+
+        if (!supabaseClient) {
+
+            formMessage.textContent =
+                "Erreur : Impossible de se connecter à la base de données. Veuillez réessayer plus tard.";
+
+            formMessage.classList.add(
+                "error"
+            );
+
+            return;
+        }
 
         // ==============================================
         // RÉCUPÉRATION DES DONNÉES
